@@ -3,7 +3,7 @@
 -- ✅ DISCORD WEBHOOK + USER COUNTER (JSONBin.io)
 -- =========================================================
 
-local WEBHOOK_URL = "https://discord.com/api/webhooks/1552560930527911976/nv3ZGk8jrrSoTUNjFWt62QAx_WHPXdhDF_gEXyQmyZeZJrF-m1Cxm6UJx5bVh3cpMh8z"  -- GANTI
+local WEBHOOK_URL = ""  -- GANTI
 local JSONBIN_ID  = "6ab4baf0ffd5d160532942b0"                              -- GANTI (dari jsonbin.io)
 local JSONBIN_KEY = "$2a$10$fqM416FqxYlN9IxodShsTe89/7se5TluSWtfdJo1xJgIPdt5ruJhi"                              -- GANTI (X-Master-Key)
 
@@ -85,30 +85,30 @@ local function sendWebhook(isFirstTime, activeCount, totalCount, executor, hwid)
     local now = os.time()
 
     local title = isFirstTime
-        and "🆕 New User Executed Siwolfiy Hub!"
-        or  "🔁 Returning User Executed Siwolfiy Hub!"
+        and "🆕 New User Executed Lych X Putra Hub!"
+        or  "🔁 Returning User Executed Lych X Putra Hub!"
     local color = isFirstTime and 0x00FF88 or 0x00A2FF
 
     local payload = {
-        username = "Siwolfiy Hub Logger",
+        username = "Lych X Putra Hub Logger",
         embeds = {{
             title = title,
-            description = "**Siwolfiy Hub [ New Gen ]** — Steal An Egg\nScript berhasil dijalankan.",
+            description = "**Lych X Putra Hub [ V1 ]** — Steal An Egg\nScript berhasil dijalankan.",
             color = color,
             thumbnail = { url = avatar },
             fields = {
-                { name = "👤 Username",   value = string.format("`%s` (%s)", player.Name, player.DisplayName), inline = true },
-                { name = "🆔 User ID",    value = "`" .. tostring(player.UserId) .. "`", inline = true },
+                { name = "👤 Namalu",   value = string.format("`%s` (%s)", player.Name, player.DisplayName), inline = true },
+                { name = "🆔 ID",    value = "`" .. tostring(player.UserId) .. "`", inline = true },
                 { name = "⚙️ Executor",   value = "`" .. executor .. "`", inline = true },
-                { name = "🔑 HWID",       value = "`" .. string.sub(hwid, 1, 40) .. "...`", inline = false },
+                { name = "🔑 Hwid",       value = "`" .. string.sub(hwid, 1, 40) .. "...`", inline = false },
                 { name = "🌐 Place ID",   value = "`" .. tostring(game.PlaceId) .. "`", inline = true },
-                { name = "🕐 Time",       value = "<t:" .. now .. ":F> (<t:" .. now .. ":R>)", inline = true },
-                { name = "📊 Active Users (Sekarang)", value = "**" .. tostring(activeCount) .. "** orang", inline = true },
-                { name = "🏆 Total Users (All-time)",  value = "**" .. tostring(totalCount) .. "** orang", inline = true },
-                { name = "🎮 Server Players", value = tostring(#Players:GetPlayers()) .. " / " .. tostring(Players.MaxPlayers), inline = true },
+                { name = "🕐 Waktu",       value = "<t:" .. now .. ":F> (<t:" .. now .. ":R>)", inline = true },
+                { name = "📊 User Aktif", value = "**" .. tostring(activeCount) .. "** orang", inline = true },
+                { name = "🏆 Total User",  value = "**" .. tostring(totalCount) .. "** orang", inline = true },
+                { name = "🎮 Server Player", value = tostring(#Players:GetPlayers()) .. " / " .. tostring(Players.MaxPlayers), inline = true },
             },
             footer = {
-                text = "Siwolfiy Hub • " .. executor,
+                text = "Lych X Putra Hub • " .. executor,
             },
             timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ"),
         }},
@@ -154,7 +154,7 @@ task.spawn(function()
     sendWebhook(isFirstTime, activeCount, stats.totalUsers, executor, hwid)
 
     -- Log ke console
-    print(string.format("[SiwolfiyHub Logger] User: %s | First time: %s | Total: %d",
+    print(string.format("[Lych X PutraHub Logger] User: %s | First time: %s | Total: %d",
         player.Name, tostring(isFirstTime), stats.totalUsers))
 end)
 
@@ -164,7 +164,7 @@ local ProxyLib = loadstring(game:HttpGet(
 local Lib = ProxyLib.new()
 
 local Window = Lib:CreateWindow({
-    Title = "Siwolfiy Hub [ New Gen ]",
+    Title = "Lych X Putra Hub [ V1 ]",
     Subtitle = "Steal An Egg",
     Size = Vector2.new(460, 320),
     MinSize = Vector2.new(420, 320),
@@ -180,7 +180,7 @@ local Window = Lib:CreateWindow({
         Gradient = true,
         Colors = { Color3.fromRGB(80, 180, 255), Color3.fromRGB(30, 90, 255) },
         Words = {
-            { Text = "Siwolfiy", Colors = { Color3.fromRGB(80, 200, 255), Color3.fromRGB(0, 120, 255) } },
+            { Text = "Lych X Putra", Colors = { Color3.fromRGB(80, 200, 255), Color3.fromRGB(0, 120, 255) } },
             { Text = "Hub", Colors = { Color3.fromRGB(120, 220, 255), Color3.fromRGB(30, 90, 255) } },
         },
     },
@@ -197,7 +197,7 @@ local Window = Lib:CreateWindow({
 })
 
 -- =========================================================
--- ==============  SiwolfiyHUB ORIGINAL (UNCHANGED)  ==========
+-- ==============  Lych X PutraHUB ORIGINAL (UNCHANGED)  ==========
 -- =========================================================
 local e = game:GetService("Players")
 local r = game:GetService("Workspace")
@@ -281,8 +281,8 @@ local E = 525
 local b = 620
 local A = 130
 local S = CFrame.new(4773.7587890625, 70.392112731934, -315.73501586914)
-local Z = "SiwolfiyHub_FlightSpeed.txt"
-local z = "SiwolfiyHub_EggSelectConfig.json"
+local Z = "Lych X PutraHub_FlightSpeed.txt"
+local z = "Lych X PutraHub_EggSelectConfig.json"
 local d = { ["Light Dark"]=Color3.fromRGB(168,85,247), ["Titan Temple"]=Color3.fromRGB(245,158,11), ["Cherry Blossom"]=Color3.fromRGB(236,72,153), ["Cosmic"]=Color3.fromRGB(6,182,212), ["Prehistoric"]=Color3.fromRGB(16,185,129), ["Abyss Ocean"]=Color3.fromRGB(59,130,246), ["Volcano"]=Color3.fromRGB(239,68,68), ["Snow"]=Color3.fromRGB(147,197,253), ["Jungle"]=Color3.fromRGB(34,197,94), ["Desert"]=Color3.fromRGB(234,179,8), ["Lake"]=Color3.fromRGB(20,184,166), ["Forest"]=Color3.fromRGB(22,163,74) }
 local X = {"Divine","Eternal","Secret","Cosmic","Mythic","Legendary","Epic","Rare","Uncommon","Common"}
 local G = { ["Divine"]=Color3.fromRGB(244,63,94), ["Eternal"]=Color3.fromRGB(217,70,239), ["Secret"]=Color3.fromRGB(249,115,22), ["Cosmic"]=Color3.fromRGB(6,182,212), ["Mythic"]=Color3.fromRGB(139,92,246), ["Legendary"]=Color3.fromRGB(251,191,36), ["Epic"]=Color3.fromRGB(168,85,247), ["Rare"]=Color3.fromRGB(59,130,246), ["Uncommon"]=Color3.fromRGB(34,197,94), ["Common"]=Color3.fromRGB(148,163,184) }
@@ -4153,7 +4153,7 @@ end
 local function Mk()
     h.performanceMode = true
     pcall(function()
-        local e2 = r:FindFirstChild("SiwolfiyHub_EggESP")
+        local e2 = r:FindFirstChild("Lych X PutraHub_EggESP")
         if e2 then e2:Destroy() end
         local y2 = game:GetService("Lighting")
         y2.GlobalShadows = false; y2.FogEnd = 9000000000; y2.Brightness = 1; y2.ClockTime = 14
@@ -4305,11 +4305,11 @@ local ConfigTab = Window:CreateTab({
 })
 
 Info:CreateDiscordInvite({
-    Title = "Siwolfiy Server Official",
-    Description = "Join the official Siwolfiy Server for updates, announcements, support, and community.",
+    Title = "Lych X Putra Server Official",
+    Description = "Join the official Lych X Putra Server for updates, announcements, support, and community.",
     Icon = "rbxassetid://102468802738090",
     Banner = "rbxassetid://101774438494641",
-    Link = "https://discord.gg/d3NSzcpRZ5",
+    Link = "",
     Button = "Join Server",
 })
 
@@ -4317,7 +4317,7 @@ Main:CreateSection({ Text = "Auto Steal Modes" })
 
 Main:CreateButton({
     Title = "Load Anti Hit Guard",
-    Description = "Siwolfiy Hub utama akan otomatis di-unload dulu biar tidak tabrakan",
+    Description = "Lych X Putra Hub utama akan otomatis di-unload dulu biar tidak tabrakan",
     Callback = function()
         pcall(function()
             if h then
@@ -4376,7 +4376,7 @@ local syncing = false
 
 tweenToggle = Main:CreateToggle({
     Title = "Auto Steal (Tween)",
-    Description = "Fly smoothly to steal eggs (SiwolfiyHUB engine)",
+    Description = "Fly smoothly to steal eggs (Lych X PutraHUB engine)",
     Default = false,
     Callback = function(v)
         if syncing then return end
@@ -4474,7 +4474,7 @@ tweenToggle = Main:CreateToggle({
 
 warpToggle = Main:CreateToggle({
     Title = "Auto Steal (Teleport)",
-    Description = "Warp to steal eggs rapidly (SiwolfiyHUB engine)",
+    Description = "Warp to steal eggs rapidly (Lych X PutraHUB engine)",
     Default = false,
     Callback = function(v)
         if syncing then return end
@@ -4854,7 +4854,7 @@ ConfigTab:CreateButton({
 })
 
 -- =========== STARTUP ===========
-print("[SiwolfiyHUB] Loaded - Karakter normal saat idle")
+print("[Lych X PutraHUB] Loaded - Karakter normal saat idle")
 task.spawn(function()
     task.wait(0.5)
     pcall(C4)
