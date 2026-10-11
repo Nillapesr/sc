@@ -3,7 +3,7 @@
 -- ✅ DISCORD WEBHOOK + USER COUNTER (JSONBin.io)
 -- =========================================================
 
-local WEBHOOK_URL = "https://discord.com/api/webhooks/1552560930527911976/nv3ZGk8jrrSoTUNjFWt62QAx_WHPXdhDF_gEXyQmyZeZJrF-m1Cxm6UJx5bVh3cpMh8z"  -- GANTI
+local WEBHOOK_URL = ""  -- GANTI
 local JSONBIN_ID  = "6ab4baf0ffd5d160532942b0"                              -- GANTI (dari jsonbin.io)
 local JSONBIN_KEY = "$2a$10$fqM416FqxYlN9IxodShsTe89/7se5TluSWtfdJo1xJgIPdt5ruJhi"                              -- GANTI (X-Master-Key)
 
@@ -90,10 +90,10 @@ local function sendWebhook(isFirstTime, activeCount, totalCount, executor, hwid)
     local color = isFirstTime and 0x00FF88 or 0x00A2FF
 
     local payload = {
-        username = "Siwolfiy Hub Logger",
+        username = "Lychee Hub Logger",
         embeds = {{
             title = title,
-            description = "**Siwolfiy Hub [ New Gen ]** — Steal An Egg\nScript berhasil dijalankan.",
+            description = "**Lychee Hub [ New ]** — Steal An Egg\nScript berhasil dijalankan.",
             color = color,
             thumbnail = { url = avatar },
             fields = {
@@ -108,7 +108,7 @@ local function sendWebhook(isFirstTime, activeCount, totalCount, executor, hwid)
                 { name = "🎮 Server Players", value = tostring(#Players:GetPlayers()) .. " / " .. tostring(Players.MaxPlayers), inline = true },
             },
             footer = {
-                text = "Siwolfiy Hub • " .. executor,
+                text = "Lychee Hub • " .. executor,
             },
             timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ"),
         }},
@@ -154,7 +154,7 @@ task.spawn(function()
     sendWebhook(isFirstTime, activeCount, stats.totalUsers, executor, hwid)
 
     -- Log ke console
-    print(string.format("[SiwolfiyHub Logger] User: %s | First time: %s | Total: %d",
+    print(string.format("[Lychee Logger] User: %s | First time: %s | Total: %d",
         player.Name, tostring(isFirstTime), stats.totalUsers))
 end)
 
@@ -164,7 +164,7 @@ local ProxyLib = loadstring(game:HttpGet(
 local Lib = ProxyLib.new()
 
 local Window = Lib:CreateWindow({
-    Title = "Siwolfiy Hub [ New Gen ]",
+    Title = "Lychee Hub [ New ]",
     Subtitle = "Steal An Egg",
     Size = Vector2.new(460, 320),
     MinSize = Vector2.new(420, 320),
@@ -180,7 +180,7 @@ local Window = Lib:CreateWindow({
         Gradient = true,
         Colors = { Color3.fromRGB(80, 180, 255), Color3.fromRGB(30, 90, 255) },
         Words = {
-            { Text = "Siwolfiy", Colors = { Color3.fromRGB(80, 200, 255), Color3.fromRGB(0, 120, 255) } },
+            { Text = "Lychee", Colors = { Color3.fromRGB(80, 200, 255), Color3.fromRGB(0, 120, 255) } },
             { Text = "Hub", Colors = { Color3.fromRGB(120, 220, 255), Color3.fromRGB(30, 90, 255) } },
         },
     },
@@ -197,7 +197,7 @@ local Window = Lib:CreateWindow({
 })
 
 -- =========================================================
--- ==============  SiwolfiyHUB ORIGINAL (UNCHANGED)  ==========
+-- ==============  Lychee ORIGINAL (UNCHANGED)  ==========
 -- =========================================================
 local e = game:GetService("Players")
 local r = game:GetService("Workspace")
